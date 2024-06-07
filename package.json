@@ -1,0 +1,24 @@
+{
+  "name": "clubmanager",
+  "version": "1.0.0",
+  "description": "A club management SaaS allowing users to create beautiful and informative websites for their sports clubs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-migration": "knex migrate:make",
+    "migrate": "knex migrate:latest",
+    "migrate-rollback": "knex migrate:rollback",
+    "migrate-rollback-all": "knex migrate:rollback --all",
+    "migrate-up": "knex migrate:up",
+    "migrate-down": "knex migrate:down"
+  },
+  "author": "Dave Elliott",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "knex": "^3.1.0",
+    "mysql2": "^3.10.0",
+    "nanoid": "^5.0.7",
+    "pg": "^8.12.0"
+  }
+}
