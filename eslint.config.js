@@ -1,12 +1,12 @@
 const globals = require("globals");
 const js = require("@eslint/js");
 
-
 const OFF = 0, WARN = 1, ERROR = 2; // eslint-disable-line no-unused-vars
 
 module.exports = [
   js.configs.recommended,
   {files: ["**/*.js"], languageOptions: {sourceType: "commonjs"}},
+  {files: ["tests/**/*"], "env": {"jest": true}},
   {languageOptions: { globals: globals.browser }},
   {
     rules: {

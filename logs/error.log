@@ -1,0 +1,15 @@
+2024-06-10 08:50:33 error [club-manager] | Unable to retrieve user :b24f9fb6-4374-4c86-bdab-b33c6076e99b. User is not a constructor
+2024-06-10 08:52:39 error [club-manager] | Unable to retrieve user :b24f9fb6-4374-4c86-bdab-b33c6076e99b. Unable to retrieve database conection
+2024-06-10 08:53:29 error [club-manager] | Unable to retrieve user :b24f9fb6-4374-4c86-bdab-b33c6076e99b. Unable to retrieve database conection
+2024-06-10 08:54:45 error [club-manager] | Unable to retrieve user :b24f9fb6-4374-4c86-bdab-b33c6076e99b. Unable to retrieve database conection
+2024-06-10 08:59:24 error [club-manager] | Unable to retrieve user :b24f9fb6-4374-4c86-bdab-b33c6076e99b. Cannot create property 'id' on string ':b24f9fb6-4374-4c86-bdab-b33c6076e99b'
+2024-06-10 09:00:37 error [club-manager] | Unable to retrieve user :b24f9fb6-4374-4c86-bdab-b33c6076e99b. user.getUser is not a function
+2024-06-10 09:01:21 error [club-manager] | Unable to retrieve user :b24f9fb6-4374-4c86-bdab-b33c6076e99b. Cannot read properties of undefined (reading 'getById')
+2024-06-10 09:03:22 error [club-manager] | Unable to retrieve user :b24f9fb6-4374-4c86-bdab-b33c6076e99b. Cannot read properties of undefined (reading 'getById')
+2024-06-10 09:08:36 error [club-manager] | Unable to retrieve user :b24f9fb6-4374-4c86-bdab-b33c6076e99b. Cannot read properties of undefined (reading 'getById')
+2024-06-10 09:10:13 error [club-manager] | Unable to retrieve user :b24f9fb6-4374-4c86-bdab-b33c6076e99b. User with id :b24f9fb6-4374-4c86-bdab-b33c6076e99b not found
+2024-06-10 09:11:43 error [club-manager] | Unable to retrieve user :b24f9fb6-4374-4c86-bdab-b33c6076e99b. select * from "users" where "id" = $1 limit $2 - invalid input syntax for type uuid: ":b24f9fb6-4374-4c86-bdab-b33c6076e99b"
+2024-06-10 09:14:23 error [club-manager] | Unable to retrieve user b24f9fb6-4374-4c86-bdab-b33c6076e99b. User with id b24f9fb6-4374-4c86-bdab-b33c6076e99b not found
+2024-06-10 09:18:06 error [club-manager] | Unable to retrieve user b24f9fb6-4374-4c86-bdab-b33c6076e99b. select * from "usersa" where "id" = $1 limit $2 - relation "usersa" does not exist
+2024-06-10 09:18:22 error [club-manager] | Unable to retrieve user b24f9fb6-4374-4c86-bdab-b33c6076e99b. User with id b24f9fb6-4374-4c86-bdab-b33c6076e99b not found
+2024-06-10 09:19:11 error [club-manager] | Unable to retrieve user b24f9fb6-4374-4c86-bdab-b33c6076e99b. User with id b24f9fb6-4374-4c86-bdab-b33c6076e99b not found
