@@ -16,7 +16,7 @@ class User {
 
 
     /**
-     * Hydrates this user object with the users data
+     * Hydrates this user object with the users data and returns self
      * @param {*} id - User ID
      */
     async get (id) {
