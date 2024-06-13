@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const initDb = require('./database');
+const authRouter = require('./routers/auth');
 const userRouter = require('./routers/user');
 const logger = require('./utils/logger');
 const {httpStatus} = require('./utils/constants');
@@ -21,6 +22,7 @@ app.use(bodyParser.urlencoded());
 
 // Attach routes
 app.get('/', (req, res) => res.status(httpStatus.OK).send('OK'));
+app.use('/auth', authRouter);
 app.use('/user', userRouter);
 
 // Start server

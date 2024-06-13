@@ -1,14 +1,21 @@
 module.exports = (db) => {
     async function getById (id) {
-        const queryResult = await db('users')
+        return await db('users')
             .select('*')
             .where({id})
             .first();
-        
-        return queryResult;
     }
 
+
+    async function createUser (userData) {
+        return await db('users')
+            .insert(userData)
+            .returning('*');
+    }
+
+    
     return {
         getById,
+        createUser,
     }
 }

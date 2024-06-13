@@ -10,7 +10,6 @@ module.exports = [
   {languageOptions: { globals: globals.browser }},
   {
     rules: {
-      "class-methods-use-this": ERROR,
       "comma-dangle": [ERROR, "always-multiline"],
       "curly": [ERROR, "multi-line"],
       "default-case": [ERROR, {commentPattern: "^no\\sdefault\\srequired"}],
@@ -32,7 +31,7 @@ module.exports = [
       "no-lonely-if": ERROR,
       "no-magic-numbers": ERROR,
       "no-nested-ternary": ERROR,
-      "no-param-reassign":ERROR,
+      "no-param-reassign": WARN,
       "no-var": ERROR,
       "prefer-const": ERROR,
       "prefer-destructuring": ERROR,

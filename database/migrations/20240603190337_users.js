@@ -8,7 +8,7 @@ exports.up = async function(knex) {
         table.uuid('id', {primaryKey: true}).defaultTo(knex.raw("uuid_generate_v4()"));
         table.string('email');
         table.string('first_name');
-        table.string('second_name');
+        table.string('surname');
         table.string('password');
         table.string('salt');
     });

@@ -1,6 +1,6 @@
 const knex = require('knex')
 
-const {convertKeysToCamelCase} = require('./helpers');
+const {transformObjectKeysFromSnakeToCamelCase} = require('../transforms');
 
 const logger = require('../utils/logger');
 
@@ -36,19 +36,19 @@ function initDatabase () {
         },
     });
 
-    // ToDo: Find a better way to achieve this
+    // TODO: Find a better way to achieve this
     // Build DB library
     const dbApi = {
         users: require('./users')(db),
     }
 
     // Inject DB into models
-    require('../models/User').inject(dbApi);
+    require('../models/User/User').inject(dbApi);
 }
 
 
 function transformQueryResult (result, queryContext) { // eslint-disable-line no-unused-vars
-    return convertKeysToCamelCase(result);
+    return transformObjectKeysFromSnakeToCamelCase(result);
 }
 
 
