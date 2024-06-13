@@ -9,6 +9,10 @@ module.exports = [
   {files: ["tests/**/*"], "env": {"jest": true}},
   {languageOptions: { globals: globals.browser }},
   {
+    env: {
+        "node": true,
+        "commonjs": true,
+    },
     rules: {
       "comma-dangle": [ERROR, "always-multiline"],
       "curly": [ERROR, "multi-line"],

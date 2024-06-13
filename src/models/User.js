@@ -64,6 +64,19 @@ class User {
     static async doesUserExistForEmail (email) {
         return await _db.users.doesUserExistForEmail(email);
     }
+
+
+    static async getByEmail (email) {
+        const userData = await _db.users.getByEmail(email);
+        if (!userData) {
+            return;
+        }
+
+        const user =  new User();
+        user.data = userData;
+
+        return user;
+    }
 }
 
 

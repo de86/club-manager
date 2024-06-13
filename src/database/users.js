@@ -7,6 +7,14 @@ module.exports = (db) => {
     }
 
 
+    async function getByEmail (email) {
+        return await db('users')
+            .select('*')
+            .where({email})
+            .first();
+    }
+
+
     async function createUser (userData) {
         return await db('users')
             .insert(userData)
@@ -24,6 +32,7 @@ module.exports = (db) => {
 
     return {
         getById,
+        getByEmail,
         createUser,
         doesUserExistForEmail,
     }
