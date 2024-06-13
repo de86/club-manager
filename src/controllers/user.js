@@ -1,4 +1,4 @@
-const {User} = require('../models/User/User');
+const {User} = require('../models/User');
 const {httpStatus} = require('../utils/constants');
 const logger = require('../utils/logger');
 const passwordUtils = require('../utils/password');

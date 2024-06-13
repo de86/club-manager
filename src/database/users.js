@@ -13,9 +13,18 @@ module.exports = (db) => {
             .returning('*');
     }
 
-    
+
+    async function doesUserExistForEmail (email) {
+        const [result] = await db('users')
+            .select(db.raw('EXISTS (SELECT 1 FROM users WHERE email = ?) AS exists', [email]));
+        
+        return result.exists;
+    }
+
+
     return {
         getById,
         createUser,
+        doesUserExistForEmail,
     }
 }

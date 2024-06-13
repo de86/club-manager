@@ -1,10 +1,10 @@
 const validate = require('validate.js');
 
-const {createUserSchema} = require('../../validation/schema/models/userValidationSchema');
+const {createUserSchema} = require('../validation/schema/models/userValidationSchema');
 
-const {transformObjectKeysFromCamelToSnakeCase} = require('../../transforms');
+const {transformObjectKeysFromCamelToSnakeCase} = require('../transforms');
 
-const logger = require('../../utils/logger');
+const logger = require('../utils/logger');
 
 let _db;
 
@@ -58,6 +58,11 @@ class User {
         this.data = userRecord;
 
         return this;
+    }
+
+
+    static async doesUserExistForEmail (email) {
+        return await _db.users.doesUserExistForEmail(email);
     }
 }
 

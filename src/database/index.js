@@ -43,7 +43,7 @@ function initDatabase () {
     }
 
     // Inject DB into models
-    require('../models/User/User').inject(dbApi);
+    require('../models/User').inject(dbApi);
 }
 
 
