@@ -12,3 +12,6 @@ A club management SaaS allowing users to create beautiful and informative websit
 ### DB
 - `npm install`
 - Run `sudo docker-compose -f ./docker/docker-compose-pg.yml up` to start DB. Accessible at localhost:5432. Connection config found in script at `./docker/db-entrypoint.sh`.
+
+## Run
+`npm run dev'
