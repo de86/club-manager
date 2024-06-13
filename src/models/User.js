@@ -66,6 +66,23 @@ class User {
     }
 
 
+    static async getById (id) {
+        if (!id) {
+            throw new Error('User ID is required to fetch user data');
+        }
+
+        const userRecord = await _db.users.getById(id);
+        if (!userRecord) {
+            throw new Error(`User with id ${id} not found`);
+        }
+
+        const user = new User();
+        user.data = userRecord;
+
+        return user;
+    }
+
+
     static async getByEmail (email) {
         const userData = await _db.users.getByEmail(email);
         if (!userData) {

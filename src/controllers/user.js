@@ -12,8 +12,7 @@ module.exports = {
 
 async function getUser (req, res) {
     try{ 
-        const user = new User();
-        await user.get(req.params.id);
+        const user = await User.getById(req.params.id);
 
         res.status(httpStatus.OK).send({
             id: user.data.id,
