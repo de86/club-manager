@@ -23,7 +23,7 @@ async function getUser (req, res) {
     } catch (e) {
         logger.error(`Unable to retrieve user ${req.params.id}.`, e);
 
-        res.status(httpStatus.INTERNAL_SERVER_ERROR).send();
+        res.sendStatus(httpStatus.INTERNAL_SERVER_ERROR);
     }
 }
 
@@ -45,6 +45,6 @@ async function createUser (req, res) {
     } catch (e) {
         logger.error('Unable to create user', e);
 
-        res.status(httpStatus.INTERNAL_SERVER_ERROR).send();
+        res.sendStatus(httpStatus.INTERNAL_SERVER_ERROR);
     }
 }

@@ -12,4 +12,11 @@ module.exports = {
             length: {maximum: 16},
         },
     },
+    postRefreshSchema: {
+        refreshToken: {
+            presence: true,
+            type: 'string',
+            length: {maximum: 255},
+        }
+    },
 }
